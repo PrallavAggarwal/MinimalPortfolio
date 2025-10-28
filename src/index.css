@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+
+@theme{
+  --font-Name: "EB Garamond", serif;
+  --font-display: "JetBrains Mono", monospace;
+}
+
+.particles-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
