@@ -1,9 +1,15 @@
+import { useNavigate } from "react-router-dom"
 import { ArrowIcon } from "../assets/arrow"
 import { GithubIcon } from "../assets/github"
 
 
 export function ProjectCard(props) {
 
+  const navigate = useNavigate();
+
+  function goToBlog() {
+    navigate(`/${props.blogLink}`)
+  }
 
   return (
     <div className="font-display italic text-[12px] w-full flex flex-col gap-4 p-2.5 border border-white rounded-2xl">
@@ -22,9 +28,9 @@ export function ProjectCard(props) {
         </a>
 
 
-        <a href={''} className="group flex gap-1 items-center justify-center w-auto"><div className="group-hover:font-semibold transition-all ease-in-out">Blog</div>
+        <div className="group cursor-pointer flex gap-1 items-center justify-center w-auto"><div className="group-hover:font-semibold transition-all ease-in-out" onClick={goToBlog}>Blog</div>
           <div className="w-[11px] "><div className="group-hover:scale-100 scale-0 w-full transition-all ease-in-out"><ArrowIcon /></div></div>
-        </a>
+        </div>
       </div>
     </div>
   )

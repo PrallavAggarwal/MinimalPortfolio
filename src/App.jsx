@@ -10,6 +10,10 @@ import { useContext } from "react"
 import { AppContext } from "./AppContext"
 import { ContactForm } from "./components/contactForm"
 import Particles from "./components/particles"
+import { AllRoute } from "./routes/route"
+import { Routes, Route } from "react-router-dom"
+import { DarkMediumBlog } from "./blog/DarkMedium"
+import { MarketPriceBlog } from "./blog/MarketPrices"
 
 function App() {
 
@@ -24,6 +28,12 @@ function App() {
 
   return (
     <>
+
+      {/* <Routes> */}
+      {/*   <Route path='/DarkMediumBlog' element={<DarkMediumBlog />} /> */}
+      {/*   <Route path='/MarketPriceBlog' element={<MarketPriceBlog />} /> */}
+      {/* </Routes> */}
+
 
       <div className="w-screen z-0 h-screen overflow-y-hidden relative bg-black">
         <Particles
@@ -54,7 +64,7 @@ function App() {
                 ProjectArray.map((project) => {
                   return (
                     <>
-                      <ProjectCard title={project.title} summary={project.summary} imageUrl={project.imageUrl} githubUrl={project.githubUrl}></ProjectCard>
+                      <ProjectCard title={project.title} summary={project.summary} imageUrl={project.imageUrl} githubUrl={project.githubUrl} blogLink={project.blogLink}></ProjectCard>
                     </>
                   )
                 })
