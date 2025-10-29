@@ -62,9 +62,10 @@ function App() {
               <HorizontalLine text={'Work'}></HorizontalLine>
               {
                 ProjectArray.map((project) => {
+
                   return (
                     <>
-                      <ProjectCard title={project.title} summary={project.summary} imageUrl={project.imageUrl} githubUrl={project.githubUrl} blogLink={project.blogLink}></ProjectCard>
+                      <ProjectCard liveLink={project.liveLink} title={project.title} summary={project.summary} imageUrl={project.imageUrl} githubUrl={project.githubUrl} blogLink={project.blogLink} ></ProjectCard>
                     </>
                   )
                 })

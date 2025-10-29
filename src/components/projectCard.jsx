@@ -27,11 +27,17 @@ export function ProjectCard(props) {
           </div>
         </a>
 
-        {/**/}
+        {
+          props.liveLink &&
+          <a href={props.liveLink} target="_blank" className="group cursor-pointer flex gap-1 items-center justify-center w-auto"><div className="group-hover:font-semibold transition-all ease-in-out">Live</div>
+            <div className="w-[11px] "><div className="group-hover:scale-100 scale-0 w-full transition-all ease-in-out"><ArrowIcon /></div></div>
+          </a>
+        }
+
         {/* <div className="group cursor-pointer flex gap-1 items-center justify-center w-auto"><div className="group-hover:font-semibold transition-all ease-in-out" onClick={goToBlog}>Blog</div> */}
         {/*   <div className="w-[11px] "><div className="group-hover:scale-100 scale-0 w-full transition-all ease-in-out"><ArrowIcon /></div></div> */}
         {/* </div> */}
-        {/**/}
+
 
       </div>
     </div>
