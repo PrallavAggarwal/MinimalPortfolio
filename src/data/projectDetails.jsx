@@ -14,7 +14,7 @@ export const ProjectArray = [
     title: 'Mandi Prices',
     summary: 'Displays live prices of commodities of different states, districts and markets.',
     imageUrl: vegetable,
-    githubUrl: 'https://github.com/PrallavAggarwal/Projects-02/tree/projects/MarketPrices',
+    githubUrl: 'https://github.com/PrallavAggarwal/market-prices',
     blogLink: 'MarketPriceBlog',
     liveLink: 'https://mandi-prices.vercel.app/'
   }
