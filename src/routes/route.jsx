@@ -9,7 +9,6 @@ export function AllRoute() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<App />} />
         <Route path='/DarkMediumBlog' element={<DarkMediumBlog />} />
         <Route path='/MarketPriceBlog' element={<MarketPriceBlog />} />
       </Routes>

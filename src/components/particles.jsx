@@ -233,7 +233,7 @@ const Particles = ({
     disableRotation
   ]);
 
-  return <div ref={containerRef} className={` particles-container ${className}`}><div className=' overflow-y-scroll'>{children}</div></div>;
+  return <div ref={containerRef} className={` particles-container ${className}`}><div className=' overflow-y-scroll'></div></div>;
 };
 
 export default Particles;
