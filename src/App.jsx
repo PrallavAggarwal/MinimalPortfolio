@@ -14,6 +14,7 @@ import { AllRoute } from "./routes/route"
 import { Routes, Route } from "react-router-dom"
 import { DarkMediumBlog } from "./blog/DarkMedium"
 import { MarketPriceBlog } from "./blog/MarketPrices"
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
 
@@ -81,6 +82,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Analytics />
     </>
   )
 }
