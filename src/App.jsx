@@ -11,8 +11,8 @@ import { AppContext } from "./AppContext"
 import { ContactForm } from "./components/contactForm"
 import Particles from "./components/particles"
 import { Analytics } from "@vercel/analytics/react"
-import { StarFeedBack } from "./components/starFeedBack"
 import { Feedback } from "./components/feedback"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
 
@@ -88,6 +88,7 @@ function App() {
         </div>
       </div>
       <Analytics />
+      <SpeedInsights />
     </>
   )
 }
