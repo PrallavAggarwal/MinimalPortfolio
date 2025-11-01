@@ -17,7 +17,7 @@ export function Contacts() {
   return (
 
     <div className="border rounded-2xl border-white w-full h-auto">
-      <div className="flex items-center justify-start gap-4 py-2.5 px-2.5">
+      <div className="flex flex-wrap items-center justify-start gap-4 py-2.5 px-2.5">
 
 
         <a href={'https://github.com/PrallavAggarwal'} target="_blank" className="group flex gap-1 items-baseline justify-center w-auto">

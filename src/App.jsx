@@ -10,11 +10,9 @@ import { useContext } from "react"
 import { AppContext } from "./AppContext"
 import { ContactForm } from "./components/contactForm"
 import Particles from "./components/particles"
-import { AllRoute } from "./routes/route"
-import { Routes, Route } from "react-router-dom"
-import { DarkMediumBlog } from "./blog/DarkMedium"
-import { MarketPriceBlog } from "./blog/MarketPrices"
 import { Analytics } from "@vercel/analytics/react"
+import { StarFeedBack } from "./components/starFeedBack"
+import { Feedback } from "./components/feedback"
 
 function App() {
 
@@ -51,13 +49,18 @@ function App() {
         </Particles>
 
 
-        <div className={`absolute overflow-y-scroll z-5 top-0 left-0 font-display w-screen m-0 h-screen ${isActive ? 'overflow-hidden' : ''}`}>
+        <div className={`absolute z-5 top-0 left-0 font-display w-screen m-0 h-screen ${isActive ? 'overflow-y-hidden' : 'overflow-y-scroll'}
+  [&::-webkit-scrollbar]:w-2
+  [&::-webkit-scrollbar-track]:bg-gray-100
+  [&::-webkit-scrollbar-thumb]:bg-gray-300
+  dark:[&::-webkit-scrollbar-track]:bg-neutral-700
+  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500`}>
           {isActive &&
-            <div id="parent" className={`flex items-center justify-center w-full h-full absolute z-10 left-0 top-0 ${isActive ? 'overflow-clip' : ''}`} onClick={(e) => clickHandler(e)}>
+            <div id="parent" className={`flex items-center justify-center w-full h-full fixed z-10 ${isActive ? 'overflow-clip' : ''}`} onClick={(e) => clickHandler(e)}>
               <ContactForm />
             </div>
           }
-          <div className="w-[355px] mx-auto py-[46px] text-white flex flex-col gap-10">
+          <div className=" px-2 sm:w-[355px] sm:mx-auto py-[46px] text-white flex flex-col gap-10">
             <IntroSection></IntroSection>
             <div className="w-full italic border-white rounded-2xl p-2.5">I’m a <span className="text-orange-700">full-stack developer</span> who builds both frontend and backend with equal strength. No fluff, no jargon—just clean, fast, scalable code that solves your problem. You explain the goal once; I get it done. My stack right now : MERN, but it is upgrading. Let’s talk code.</div>
             <Status></Status>
@@ -79,6 +82,8 @@ function App() {
             <Academy degree={'12th(C.B.S.E.) - 2020-21'} school={'Lord Mahavira School'} place={'Saharanpur, U.P.'} marks={'90%'}></Academy>
             <HorizontalLine text={'Contacts'}></HorizontalLine>
             <Contacts></Contacts>
+            <HorizontalLine text={'Feedback'}></HorizontalLine>
+            <Feedback />
           </div>
         </div>
       </div>
